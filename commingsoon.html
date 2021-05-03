@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pawrex Template | Contact</title>
+<!-- Stylesheets -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<!--Color Switcher Mockup-->
+<link href="css/color-switcher-design.css" rel="stylesheet">
+
+<!--Color Themes-->
+<link id="theme-color-file" href="css/color-themes/default-theme.css" rel="stylesheet">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="main"> 
+    <!--COMMINGSOON PAGE START-->
+    <section class="comming-soon-1">
+      <div class="container">
+        <h1>Comming Soon</h1>
+        <strong class="title">We are preparing something mesmerizing</strong>
+        <div class="countdown-box">
+          <div class="col-md-12">
+                    <div class="count-area">
+                        <ul data-countdown="2030/01/01 14:21:37" class="timer">
+                            <!-- Please use event time this format: YYYY/MM/DD hh:mm:ss -->
+                            <li><span class="days">264</span><br>Days</li>
+                            <li><span class="hours">18</span><br>Hours</li>
+                            <li><span class="minutes">10</span><br>Minutes</li>
+                            <li><span class="seconds">05</span><br>Seconds</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+        <div class="social-row"> <span class="title">Follow Us</span>
+          <ul>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!--COMMINGSOON PAGE END--> 
+  </div>
+</div>
+<!--JQUERY START--> 
+<script src="js/jquery.js"></script> 
+<!--BOOTSTRAP JS START--> 
+<script src="js/bootstrap.js"></script> 
+<!---COMMING SOON COUNTER js--> 
+<script src="js/jquery.countdown.js"></script> 
+<script type="text/javascript">
+	// 11.0 countdown active code
+        $('[data-countdown]').each(function () {
+            var $this = $(this),
+                finalDate = $(this).data('countdown');
+            $this.countdown(finalDate, function (event) {
+                $(this).find(".days").html(event.strftime("%D"));
+                $(this).find(".hours").html(event.strftime("%H"));
+                $(this).find(".minutes").html(event.strftime("%M"));
+                $(this).find(".seconds").html(event.strftime("%S"));
+            });
+        });
+</script>
+</body>
+</html>
