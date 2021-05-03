@@ -237,13 +237,13 @@ ul, li {
     font-size: 16px;
     font-weight: 700;
     border-radius: 50px;
-    background-color: #e5a62d;
-    border: 2px solid #e5a62d;
+    background-color: #E7470C;
+    border: 2px solid #E7470C;
 }
 
 .btn-style-two:hover {
     background: none;
-    color: #e5a62d;
+    color: #E7470C;
 }
 
 /*Btn Style Three*/
@@ -2467,6 +2467,7 @@ img {
 .testimonial-section {
     position: relative;
     padding: 75px 0px 90px;
+    background-color: #f3f3f3;
 }
 
 .testimonial-block {
