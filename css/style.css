@@ -1501,15 +1501,18 @@ img {
     line-height: 60px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.20);
+    display: none;
 }
 
 .main-slider .tparrows.gyges:before {
     line-height: 60px;
+    display: none;
 }
 
 .main-slider .tparrows.gyges:hover {
     color: #e7470c;
     background-color: #e7470c;
+    display: none;
 }
 
 .main-slider h2 {
@@ -8320,7 +8323,8 @@ ul.detail-footer-social li a i {
 }
 
 .amount-box input[type="radio"]:checked+label {
-    color: #ffffff;
+    color: #E7470C;
+    border: 2px solid #E7470C;
 }
 
 .input-group-addon {
