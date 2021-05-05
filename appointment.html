@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Pawrex Template | About Us</title>
+    <title>Pawrex Template | Appointment</title>
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -38,7 +38,7 @@
                                     <li><span class="icon flaticon-map-marker"></span>32 Bell South, Harley St. FL</li>
                                     <li><span class="icon flaticon-telephone-handle-silhouette"></span>+(1) 234 567 8900
                                     </li>
-                                    <li><a href="#"><span class="icon fa fa-envelope"></span>support@pawrex.com</a></li>
+                                    <li><a href="#"><span class="icon fa fa-envelope"></span>support@pawsitivity.com</a></li>
                                 </ul>
                             </div>
                             <div class="top-right clearfix">
@@ -82,7 +82,7 @@
                                         </li>
                                         <li class="dropdown"><a href="pets.html">Pets</a>
                                         </li>
-                                        <li class="dropdown"><a href="shop.html">Shop</a>
+                                        <li class="dropdown"><a href="calculator.html">Cal-Culator</a>
                                         </li>
                                         <li class="current dropdown"><a href="appointment.html">Vet</a>
                                         </li>
@@ -125,7 +125,7 @@
                                     </li>
                                     <li class="dropdown"><a href="pets.html">Pets</a>
                                     </li>
-                                    <li class="dropdown"><a href="shop.html">Shop</a>
+                                    <li class="dropdown"><a href="calculator.html">Cal-Culator</a>
                                     </li>
                                     <li class="current dropdown"><a href="appointment.html">Vet</a>
                                     </li>
@@ -160,294 +160,6 @@
             </div>
         </section>
         <!--End Page Title-->
-
-        <div class="calories-calulator">
-            <div class="auto-container">
-                <div class=" clearfix">
-                    <!--Sec Title-->
-                    <div class="sec-title centered">
-                        <div class="separator">
-                            <span class="icon flaticon-pawprint-1"></span>
-                        </div>
-                        <div class="title">Because We Really Care About Your Pets</div>
-                        <h2>Calories Calculator</h2>
-                    </div>
-                </div>
-                    <div class="row">
-                    <div class="col-md-8 align-self-center col-md-offset-2 col-sm-12 cal_outer">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Dog</a></li>
-                            <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Cat</a></li>
-                        </ul>
-                        <div class="tab-content">
-                            <div id="home" class="tab-pane fade show active">
-                                <h3>Dog Feed Calculator</h3>
-                                <div class="pet_img">
-                                    <a href="#"><img src="images/icons/icon-3.png" alt="dog"></a>
-                                </div>
-                                <p>
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="weightlbs">Your Name</label>
-                                                <input type="text" class="form-control" id="parent_name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="weightlbs">Your Email</label>
-                                                <input type="email" class="form-control" id="parent_email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="weightlbs">Dog Name</label>
-                                                <input type="email" class="form-control" id="dog_name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <p><label for="weightlbs">Dog Gender <span>*</span></label></p>
-                                                <input type="radio" id="option2" name="selector" checked="">
-                                                <label class="gender">Male</label>
-                                                <input type="radio" id="option2" name="selector" checked="">
-                                                <label class="gender">Female</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="weightlbs">Weight <span>*</span></label>
-                                        <input type="text" class="form-control" id="weightlbs" aria-describedby="emailHelp" placeholder="Enter Weight" onchange="get_dog_calories()">
-                                        <small id="emailHelp" class="form-text text-muted">Enter Weight In Pounds</small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="dogactivity">Select Dog Activity <span>*</span></label>
-                                        <select class="form-control" id="dogactivity" onchange="get_dog_calories()">
-                                            <option value="90">Inactive/Senior</option>
-                                            <option value="110">Typical</option>
-                                            <option value="125">Active</option>
-                                            <option value="175">Highly Active</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="dogbreed">Select Dog Breed <span>*</span></label>
-                                        <select class="form-control" id="dogbreed">
-                                            <option value="Select Breed">Select Breed</option>
-                                            <option value="Affenpinscher">Affenpinscher</option>
-                                            <option value="Afghan Hound">Afghan Hound</option>
-                                            <option value="Airedale Terrier">Airedale Terrier</option>
-                                            <option value="Akita">Akita</option>
-                                            <option value="Alaskan Malamute">Alaskan Malamute</option>
-                                            <option value="American English Coonhound">American English Coonhound</option>
-                                            <option value="American Eskimo Dog">American Eskimo Dog</option>
-                                            <option value="American Foxhound">American Foxhound</option>
-                                            <option value="American Hairless Terrier">American Hairless Terrier</option>
-                                            <option value="American Leopard Hound">American Leopard Hound</option>
-                                            <option value="American Staffordshire Terrier">American Staffordshire Terrier</option>
-                                            <option value="American Water Spaniel">American Water Spaniel</option>
-                                            <option value="Anatolian Shepherd Dog">Anatolian Shepherd Dog</option>
-                                            <option value="Appenzeller Sennenhunde">Appenzeller Sennenhunde</option>
-                                            <option value="Australian Cattle Dog">Australian Cattle Dog</option>
-                                            <option value="Australian Shepherd">Australian Shepherd</option>
-                                            <option value="Australian Terrier">Australian Terrier</option>
-                                            <option value="Azawakh">Azawakh</option>
-                                            <option value="Barbet">Barbet</option>
-                                            <option value="Basenji">Basenji</option>
-                                            <option value="Basset Hound">Basset Hound</option>
-                                            <option value="Beagle">Beagle</option>
-                                            <option value="Bearded Collie">Bearded Collie</option>
-                                            <option value="Beauceron">Beauceron</option>
-                                            <option value="Bedlington Terrier">Bedlington Terrier</option>
-                                            <option value="Belgian Laekenois">Belgian Laekenois</option>
-                                            <option value="Belgian Malinois">Belgian Malinois</option>
-                                            <option value="Belgian Sheepdog">Belgian Sheepdog</option>
-                                            <option value="Belgian Tervuren">Belgian Tervuren</option>
-                                            <option value="Bergamasco">Bergamasco</option>
-                                            <option value="Berger Picard">Berger Picard</option>
-                                            <option value="Bernese Mountain Dog">Bernese Mountain Dog</option>
-                                            <option value="Bichon Frise">Bichon Frise</option>
-                                            <option value="Biewer Terrier">Biewer Terrier</option>
-                                            <option value="Black and Tan Coonhound">Black and Tan Coonhound</option>
-                                            <option value="Black Russian Terrier">Black Russian Terrier</option>
-                                            <option value="Bloodhound">Bloodhound</option>
-                                            <option value="Bluetick Coonhound">Bluetick Coonhound</option>
-                                            <option value="Boerboel">Boerboel</option>
-                                            <option value="Bolognese">Bolognese</option>
-                                            <option value="Border Collie">Border Collie</option>
-                                            <option value="Border Terrier">Border Terrier</option>
-                                            <option value="Borzoi">Borzoi</option>
-                                            <option value="Boston Terrier">Boston Terrier</option>
-                                            <option value="Bouvier des Flandres">Bouvier des Flandres</option>
-                                            <option value="Boxer">Boxer</option>
-                                            <option value="Boykin Spaniel">Boykin Spaniel</option>
-                                            <option value="Bracco Italiano">Bracco Italiano</option>
-                                            <option value="Braque du Bourbonnais">Braque du Bourbonnais</option>
-                                            <option value="Briard">Briard</option>
-                                            <option value="Brittany">Brittany</option>
-                                            <option value="Broholmer">Broholmer</option>
-                                            <option value="Brussels Griffon">Brussels Griffon</option>
-                                            <option value="Bull Terrier">Bull Terrier</option>
-                                            <option value="Bulldog">Bulldog</option>
-                                            <option value="Bullmastiff">Bullmastiff</option>
-                                            <option value="Cairn Terrier">Cairn Terrier</option>
-                                            <option value="Canaan Dog">Canaan Dog</option>
-                                            <option value="Cane Corso">Cane Corso</option>
-                                            <option value="Cardigan Welsh Corgi">Cardigan Welsh Corgi</option>
-                                            <option value="Catahoula Leopard Dog">Catahoula Leopard Dog</option>
-                                            <option value="Caucasian Ovcharka">Caucasian Ovcharka</option>
-                                            <option value="Cavalier King Charles Spaniel">Cavalier King Charles Spaniel</option>
-                                            <option value="Central Asian Shepherd Dog">Central Asian Shepherd Dog</option>
-                                            <option value="Cesky Terrier">Cesky Terrier</option>
-                                            <option value="Chesapeake Bay Retriever">Chesapeake Bay Retriever</option>
-                                            <option value="Chihuahua">Chihuahua</option>
-                                            <option value="Chinese Crested">Chinese Crested</option>
-                                            <option value="Chinese Shar-Pei">Chinese Shar-Pei</option>
-                                            <option value="Chinook">Chinook</option>
-                                            <option value="Chow Chow">Chow Chow</option>
-                                            <option value="Cirneco dellEtna">Cirneco dellEtna</option>
-                                            <option value="Clumber Spaniel">Clumber Spaniel</option>
-                                            <option value="Cocker Spaniel">Cocker Spaniel</option>
-                                            <option value="Collie">Collie</option>
-                                            <option value="Coton de Tulear">Coton de Tulear</option>
-                                            <option value="Curly-Coated Retriever">Curly-Coated Retriever</option>
-                                            <option value="Czechoslovakian Vlcak">Czechoslovakian Vlcak</option>
-                                            <option value="Dachshund">Dachshund</option>
-                                            <option value="Dalmatian">Dalmatian</option>
-                                            <option value="Dandie Dinmont Terrier">Dandie Dinmont Terrier</option>
-                                            <option value="Danish-Swedish Farmdog">Danish-Swedish Farmdog</option>
-                                            <option value="Deutscher Wachtelhund">Deutscher Wachtelhund</option>
-                                            <option value="Doberman Pinscher">Doberman Pinscher</option>
-                                            <option value="Dogo Argentino">Dogo Argentino</option>
-                                            <option value="Dogue de Bordeaux">Dogue de Bordeaux</option>
-                                            <option value="Drentsche Patrijshond">Drentsche Patrijshond</option>
-                                            <option value="Drever">Drever</option>
-                                            <option value="Dutch Shepherd">Dutch Shepherd</option>
-                                            <option value="English Cocker Spaniel">English Cocker Spaniel</option>
-                                            <option value="English Foxhound">English Foxhound</option>
-                                            <option value="English Setter">English Setter</option>
-                                            <option value="English Springer Spaniel">English Springer Spaniel</option>
-                                            <option value="English Toy Spaniel">English Toy Spaniel</option>
-                                            <option value="Entlebucher Mountain Dog">Entlebucher Mountain Dog</option>
-                                            <option value="Estrela Mountain Dog">Estrela Mountain Dog</option>
-                                            <option value="Eurasier">Eurasier</option>
-                                            <option value="Field Spaniel">Field Spaniel</option>
-                                            <option value="Finnish Lapphund">Finnish Lapphund</option>
-                                            <option value="Finnish Spitz">Finnish Spitz</option>
-                                            <option value="Flat-Coated Retriever">Flat-Coated Retriever</option>
-                                            <option value="French Bulldog">French Bulldog</option>
-                                            <option value="French Spaniel">French Spaniel</option>
-                                            <option value="German Longhaired Pointer">German Longhaired Pointer</option>
-                                            <option value="German Pinscher">German Pinscher</option>
-                                            <option value="German Shepherd Dog">German Shepherd Dog</option>
-                                            <option value="German Shorthaired Pointer">German Shorthaired Pointer</option>
-                                            <option value="German Spitz">German Spitz</option>
-                                            <option value="German Wirehaired Pointer">German Wirehaired Pointer</option>
-                                            <option value="Giant Schnauzer">Giant Schnauzer</option>
-                                            <option value="Glen of Imaal Terrier">Glen of Imaal Terrier</option>
-                                            <option value="Golden Retriever">Golden Retriever</option>
-                                            <option value="Gordon Setter">Gordon Setter</option>
-                                            <option value="Grand Basset Griffon Vendeen">Grand Basset Griffon Vendeen</option>
-                                            <option value="Great Dane">Great Dane</option>
-                                            <option value="Great Pyrenees">Great Pyrenees</option>
-                                            <option value="Greater Swiss Mountain Dog">Greater Swiss Mountain Dog</option>
-                                            <option value="Greyhound">Greyhound</option>
-                                            <option value="Hamiltonstovare">Hamiltonstovare</option>
-                                            <option value="Harrier">Harrier</option>
-                                            <option value="Havanese">Havanese</option>
-                                            <option value="Hovawart">Hovawart</option>
-                                            <option value="Ibizan Hound">Ibizan Hound</option>
-                                            <option value="Icelandic Sheepdog">Icelandic Sheepdog</option>
-                                            <option value="Other"> Other</option>
-                                        </select>
-                                    </div>
-                                    <h1 id="dogtotalcal"></h1>
-                                    <script type="text/javascript">
-                                    function get_dog_calories() {
-                                        //Here we get the total price by calling our function
-                                        //Each function returns a number so by calling them we add the values they return together
-                                        var weight = document.getElementById('weightlbs').value;
-                                        var weightkg = weight * .4536;
-                                        var dogactivityv = (Math.pow(weightkg, .75)) * document.getElementById('dogactivity').value;
-
-                                        //display the result
-                                        document.getElementById('dogtotalcal').innerHTML =
-                                            "Total calories need per day for your dog " + Math.round(dogactivityv);
-
-                                    }
-                                    </script>
-                                </p>
-                            </div>
-                            <div id="menu1" class="tab-pane fade">
-                                <h3>Cat Feed Calculator</h3>
-                                <div class="pet_img">
-                                    <a href="#"><img src="images/icons/icon-1.png" alt="cat"></a>
-                                </div>
-                                <p>
-                                    <p>
-                                        <div class="row">
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="weightlbs">Your Name</label>
-                                                    <input type="text" class="form-control" id="parent_name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="weightlbs">Your Email</label>
-                                                    <input type="email" class="form-control" id="parent_email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="weightlbs">Cat Name</label>
-                                                    <input type="email" class="form-control" id="cat_name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <p><label for="weightlbs">Cat Gender <span>*</span></label></p>
-                                                    <input type="radio" id="option2" name="selector" checked="">
-                                                    <label class="gender">Male</label>
-                                                    <input type="radio" id="option2" name="selector" checked="">
-                                                    <label class="gender">Female</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="weightlb">Weight <span>*</span></label>
-                                            <input type="text" class="form-control" id="weightlb" aria-describedby="emailHelp" placeholder="Enter Weight" onchange="get_cat_calories()">
-                                            <small id="emailHelp" class="form-text text-muted">Enter Weight In Pounds</small>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="exampleFormControlSelect1">Select Weight <span>*</span></label>
-                                            <select class="form-control" id="exampleFormControlSelect1" onchange="get_cat_calories()">
-                                                <option value="1.2">Same Weight</option>
-                                                <option value=".9">Weight Reduction</option>
-                                            </select>
-                                        </div>
-                                        <h1 id="totalcal"></h1>
-                                        <script type="text/javascript">
-                                        function get_cat_calories() {
-                                            //Here we get the total price by calling our function
-                                            //Each function returns a number so by calling them we add the values they return together
-                                            var weight = document.getElementById('weightlb').value;
-                                            var weightkg = weight * .4536;
-                                            var cakePrice = (Math.pow(weightkg, .75)) * 70 * document.getElementById('exampleFormControlSelect1').value;
-
-                                            //display the result
-                                            document.getElementById('totalcal').innerHTML =
-                                                "Total calories need per day for your cat " + Math.round(cakePrice);
-
-                                        }
-                                        </script>
-                                    </p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </div>
 
         <!--Appointment Section-->
         <section class="appointment-section appointment-page" style="background-image:url(images/background/3.png)">
@@ -538,10 +250,10 @@
                                 <div class="footer-widget links-widget">
                                     <h2>Web Links</h2>
                                     <ul class="links">
-                                        <li><a href="#">Home Page</a></li>
-                                        <li><a href="#">About us</a></li>
-                                        <li><a href="#">Our Services</a></li>
-                                        <li><a href="#">Contact Us</a></li>
+                                        <li><a href="home.html">Home Page</a></li>
+                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="appointment.html">Appointment</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -560,7 +272,7 @@
                                             <li><span class="icon fa fa-map-marker"></span>32 BellSouth, Harley Street
                                                 <br> Florida 33968</li>
                                             <li><span class="icon fa fa-phone"></span>+(1) 234 567 8900</li>
-                                            <li><span class="icon fa fa-envelope"></span>support@pawrex.com</li>
+                                            <li><span class="icon fa fa-envelope"></span>support@pawsitivity.com</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -569,7 +281,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <div class="copyright">Copyrights 2019 <span>PAWREX</span> • All Rights Reserved.</div>
+                    <div class="copyright">Copyrights 2019 <span>PAWSITIVITY</span> • All Rights Reserved.</div>
                 </div>
             </div>
         </footer>
