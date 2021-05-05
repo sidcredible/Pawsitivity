@@ -220,7 +220,7 @@
                                     <div class="form-group">
                                         <label for="weightlbs">Weight <span>*</span></label>
                                         <input type="text" class="form-control" id="weightlbs" aria-describedby="emailHelp" placeholder="Enter Weight" onchange="get_dog_calories()">
-                                        <small id="emailHelp" class="form-text text-muted">Enter Weight In Pounds</small>
+                                        <small id="emailHelp" class="form-text text-muted">Enter Weight In Kilogram</small>
                                     </div>
                                     <div class="form-group">
                                         <label for="dogactivity">Select Dog Activity <span>*</span></label>
@@ -368,7 +368,7 @@
                                         //Here we get the total price by calling our function
                                         //Each function returns a number so by calling them we add the values they return together
                                         var weight = document.getElementById('weightlbs').value;
-                                        var weightkg = weight * .4536;
+                                        var weightkg = weight * 1;
                                         var dogactivityv = (Math.pow(weightkg, .75)) * document.getElementById('dogactivity').value;
 
                                         //display the result
