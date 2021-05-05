@@ -155,7 +155,7 @@
                     <div class="pull-right">
                         <ul class="page-breadcrumb">
                             <li><a href="index.html">Home</a></li>
-                            <li>Vet</li>
+                            <li>Calculator</li>
                         </ul>
                     </div>
                 </div>
@@ -189,18 +189,6 @@
                                 </div>
                                 <p>
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="weightlbs">Your Name</label>
-                                                <input type="text" class="form-control" id="parent_name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <div class="form-group">
-                                                <label for="weightlbs">Your Email</label>
-                                                <input type="email" class="form-control" id="parent_email">
-                                            </div>
-                                        </div>
                                         <div class="col-md-6 col-sm-12">
                                             <div class="form-group">
                                                 <label for="weightlbs">Dog Name</label>
@@ -389,18 +377,6 @@
                                         <div class="row">
                                             <div class="col-md-6 col-sm-12">
                                                 <div class="form-group">
-                                                    <label for="weightlbs">Your Name</label>
-                                                    <input type="text" class="form-control" id="parent_name">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label for="weightlbs">Your Email</label>
-                                                    <input type="email" class="form-control" id="parent_email">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
                                                     <label for="weightlbs">Cat Name</label>
                                                     <input type="email" class="form-control" id="cat_name">
                                                 </div>
@@ -418,7 +394,7 @@
                                         <div class="form-group">
                                             <label for="weightlb">Weight <span>*</span></label>
                                             <input type="text" class="form-control" id="weightlb" aria-describedby="emailHelp" placeholder="Enter Weight" onchange="get_cat_calories()">
-                                            <small id="emailHelp" class="form-text text-muted">Enter Weight In Pounds</small>
+                                            <small id="emailHelp" class="form-text text-muted">Enter Weight In Kilogram</small>
                                         </div>
                                         <div class="form-group">
                                             <label for="exampleFormControlSelect1">Select Weight <span>*</span></label>
@@ -433,7 +409,7 @@
                                             //Here we get the total price by calling our function
                                             //Each function returns a number so by calling them we add the values they return together
                                             var weight = document.getElementById('weightlb').value;
-                                            var weightkg = weight * .4536;
+                                            var weightkg = weight * 1;
                                             var cakePrice = (Math.pow(weightkg, .75)) * 70 * document.getElementById('exampleFormControlSelect1').value;
 
                                             //display the result
