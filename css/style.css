@@ -483,8 +483,13 @@ img {
     -o-transition: all 500ms ease;
 }
 
+.main-header .logo{
+    margin: 10px 0px;
+}
+
 .sticky-header .logo {
-    padding: 6px 0px 4px;
+    padding: 6px 0px 4px 0px;
+    margin: 25px 0px;
 }
 
 .main-header .sticky-header .outer-box {
