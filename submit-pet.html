@@ -35,15 +35,17 @@
                         <div class="clearfix">
                             <div class="top-left">
                                 <ul class="clearfix">
-                                    <li><span class="icon flaticon-map-marker"></span>1014, Pandav Nagar, Ghaziabad 203001</li>
+                                    <li><span class="icon flaticon-map-marker"></span>1014, Pandav Nagar, Ghaziabad
+                                        203001</li>
                                     <li><span class="icon flaticon-telephone-handle-silhouette"></span>+(91) 72753 90010
                                     </li>
-                                    <li><a href="#"><span class="icon fa fa-envelope"></span>support@pawsitivity.com</a></li>
+                                    <li><a href="#"><span class="icon fa fa-envelope"></span>support@pawsitivity.com</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="top-right clearfix">
-                                <div class="donate-box"><a href="submit-pet.html"
-                                        class="theme-btn btn-style-one">SUBMIT PET</a></div>
+                                <div class="donate-box"><a href="submit-pet.html" class="theme-btn btn-style-one">SUBMIT
+                                        PET</a></div>
                                 <div class="donate-box"><a href="donation.html"
                                         class="theme-btn btn-style-one">donate</a></div>
                                 <!--social-icon-->
@@ -165,74 +167,107 @@
         <div class="sidebar-page-container ">
             <div class="auto-container">
                 <div class="submit_details clearfix">
-                    <form class="pet_form col-md-12">
+                    <form class="pet_form col-md-12" enctype="multipart/form-data">
                         <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                            <label>New Pet Title</label>
-                            <input type="text" name="title" placeholder="New Pet">
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <label>Your Email</label>
-                            <input type="email" name="email" placeholder="Your Email">
-                        </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <label>Your Name</label>
-                            <input type="text" name="pet_name" placeholder="Your Name">
-                        </div>
-                    </div>
-                        <div class="col-sm-12">
-                            <label>Pet Description</label>
-                            <textarea></textarea>
-                        </div>
-                        <div class="col-sm-12">
-                            <label>Pet Image</label>
-                            <a href="#" id="OpenImgUpload" class="pet_img">Image</a>
-                            <input id="imgupload" type="file" name="files[]" style="display: none;">
-                        </div>
-                        <div class="col-sm-12">
-                            <label>Featured Pet</label>
-                            <input type="checkbox" name="">
-                            <p>Select if featured is selected</p>
-                        </div>
-                        <div class="col-sm-12">
-                            <label>Pet Gender</label>
-                            <ul class="gender">
-                                <li><input type="radio" name="no" checked>No selection</li>
-                                <li><input type="radio" name="M">Male</li>
-                                <li><input type="radio" name="F">Female</li>
-                            </ul>
-                            <p>Select gender of pet</p>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="title">New Pet Title</label>
+                                <input type="text" class="form-control" id="title" placeholder="New Pet" name="title">
+                            </div>
                         </div>
                         <div class="row">
-                        <div class="col-sm-4 col-xs-12">
-                            <label>Age</label>
-                            <input type="text" name="age" placeholder="Age">
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="exampleFormControlInput1">Your Name</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Your Name" name="pet_name">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="email">Your Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                    name="email">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="phone">Your Phone</label>
+                                <input type="phone" class="form-control" id="phone" placeholder="Your Phone"
+                                    name="phone">
+                            </div>
+                            <div class="form-group col-sm-12">
+                                <label for="description">Pet Description:</label>
+                                <textarea class="form-control" rows="5" id="description"></textarea>
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <label>Size</label>
-                            <input type="email" name="pet-size" placeholder="size">
+
+                        <div class="py-3 custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="pet-image">
+                            <label class="custom-file-label" for="customFile">Pet Image</label>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <label>weight</label>
-                            <input type="text" name="weight" placeholder="Your Name">
+
+                        <div class="row mb-3">
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="age">Age</label>
+                                <input type="text" class="form-control" id="age" placeholder="Age" name="age">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="size">Size</label>
+                                <input type="text" class="form-control" id="size" placeholder="size" name="pet-size">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="weight">Weight</label>
+                                <input type="text" class="form-control" id="weight" placeholder="Weight" name="weight">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="color">Color</label>
+                                <input type="text" class="form-control" id="color" placeholder="Pet Color" name="color">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="type">Type</label>
+                                <input type="text" class="form-control" id="type" placeholder="Pet Type" name="type">
+                            </div>
+                            <div class="form-group col-sm-4 col-xs-12">
+                                <label for="breed">Breed</label>
+                                <input type="text" class="form-control" id="breed" placeholder="Pet Breed" name="breed">
+                            </div>
+
+                            <div class="py-sm-4 form-group col-sm-4 col-xs-12">
+
+
+                                <label class="pr-5 pl-1"
+                                    style="position: relative; margin-bottom: 0; vertical-align: top;">
+                                    Vacinated</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio3"
+                                        name="is_vaccinated" value="true">
+                                    <label class="custom-control-label" for="customRadio3">Yes</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio4"
+                                        name="is_vaccinated" value="false">
+                                    <label class="custom-control-label" for="customRadio4">No</label>
+                                </div>
+
+
+                                <p class="blockquote-footer">Select an option</p>
+                            </div>
+                            <div class="py-sm-4 col-sm-4">
+                                <label class="pr-5 pl-1"
+                                    style="position: relative; margin-bottom: 0; vertical-align: top;">Pet
+                                    Gender</label>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio" name="gender"
+                                        value="male">
+                                    <label class="custom-control-label" for="customRadio">Male</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" id="customRadio2" name="gender"
+                                        value="female">
+                                    <label class="custom-control-label" for="customRadio2">Female</label>
+                                </div>
+                                <p class="blockquote-footer">Select gender of pet</p>
+                            </div>
                         </div>
-                        <div class="col-sm-4 col-xs-12">
-                            <label>Color</label>
-                            <input type="text" name="weight" placeholder="Pet Color">
-                        </div>
-                        </div>
+
+
                         <div class="col-sm-12">
-                            <label>vacinated</label>
-                            <select class="custom_select" name="slect" id="vacinate">    
-                                <option value="">None</option>
-                                <option value="yes">Yes</option>
-                                <option value="no">No</option>
-                                <option value="none">Dont Know</option>
-                            </select>
-                            <p>Select an option</p>
-                        </div>
-                        <div class="col-sm-12">
-                            <a href="#" class="theme-btn btn-style-two">Submit Post</a>
+                            <input type="submit" name="Add-Pet" value="Submit Pet" class="theme-btn btn-style-two" />
                         </div>
                     </form>
                 </div>
@@ -253,7 +288,9 @@
                                         <div class="logo">
                                             <a href="index.html"><img src="images/footer-logo-2.png" alt="" /></a>
                                         </div>
-                                        <div class="text">This prodigiously grew tortoise charact stupidly pernicious jeepers along while accordingly under useful much salacious walking fars before some supp aesthetically wow shuddered.</div>
+                                        <div class="text">This prodigiously grew tortoise charact stupidly pernicious
+                                            jeepers along while accordingly under useful much salacious walking fars
+                                            before some supp aesthetically wow shuddered.</div>
                                         <ul class="social-icon-two">
                                             <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                             <li><a href="#"><span class="fa fa-facebook-square"></span></a></li>
@@ -288,8 +325,9 @@
                                     <div class="footer-widget info-widget">
                                         <h2>Get In Touch</h2>
                                         <ul>
-                                            <li><span class="icon fa fa-map-marker"></span>1014, Pandav Nagar, 
-                                                <br> Ghaziabad 203001</li>
+                                            <li><span class="icon fa fa-map-marker"></span>1014, Pandav Nagar,
+                                                <br> Ghaziabad 203001
+                                            </li>
                                             <li><span class="icon fa fa-phone"></span>+(91) 72753 90010</li>
                                             <li><span class="icon fa fa-envelope"></span>support@pawsitivity.com</li>
                                         </ul>
@@ -309,8 +347,8 @@
     <!--End pagewrapper-->
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon flaticon-pawprint-1"></span></div>
-    
     <script src="js/jquery.js"></script>
+    <script src="js/submit-pet.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/jquery.fancybox.js"></script>
