@@ -58,9 +58,9 @@ jQuery(function ($) {
                     contentType: false,
                     processData: false,
                 }).done(function (data) {
-                    alert(JSON.stringify(data));
+                    alert("Your Pet details have been Submitted");
                 }).fail(function (jqXHR, textStatus) {
-                    alert(jqXHR.responseJSON.message);
+                    alert(jqXHR.responseJSON);
                 });
             }
 

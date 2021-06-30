@@ -84,15 +84,15 @@ jQuery(function ($) {
                         url: "http://ec2-34-236-227-232.compute-1.amazonaws.com:3000/submit-query",
                         data: data,
                     }).done(function (data) {
-                        alert(JSON.stringify(data));
+                        alert("Your request for adoption has been submitted, our team will contact you shortly");
                     }).fail(function (jqXHR, textStatus) {
-                        alert(jqXHR.responseJSON.message);
+                        alert(jqXHR.responseJSON);
                     });
                 }
 
 
             });
     }).fail(function (jqXHR, textStatus) {
-        alert(jqXHR.responseJSON.message);
+        alert(jqXHR.responseJSON);
     });
 });
