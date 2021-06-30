@@ -8,6 +8,7 @@ jQuery(function ($) {
         function (e) {
             e.preventDefault();
             var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var phoneReg = /^[0][1-9]\\d{9}$|^[1-9]\\d{9}$/;
             var email = $("input[name='email']").val();
             var title = $("input[name='title']").val();
             var name = $("input[name='pet_name']").val();
@@ -18,7 +19,7 @@ jQuery(function ($) {
             var color = $("input[name='color']").val();
             var is_vaccinated = $("input[name='is_vaccinated']").val();
             var gender = $("input[name='gender']").val();
-            var type = $("input[name='type']").val();
+            var type = $("select[name='type']").children("option:selected").val();;
             var breed = $("input[name='breed']").val();
             var files = $("input[name='pet-image']")[0].files;
             var phone = $("input[name='phone']");
@@ -26,7 +27,12 @@ jQuery(function ($) {
             if ((!emailReg.test(email)) || (email == "")) {
                 $("input[name='email']").addClass("is-invalid");
                 $("input[name='email']").focus();
-            } else {
+            }
+            // else if ((!phoneReg.test(phone)) || (phone == "")) {
+            //     $("input[name='phone']").addClass("is-invalid");
+            //     $("input[name='phone']").focus();
+            // }
+            else {
 
                 var fd = new FormData();
                 if (files.length > 0) {
@@ -55,7 +61,7 @@ jQuery(function ($) {
                 }).done(function (data) {
                     alert(JSON.stringify(data));
                 }).fail(function (jqXHR, textStatus) {
-                    alert(textStatus);
+                    alert(jqXHR.responseJSON.message);
                 });
             }
 

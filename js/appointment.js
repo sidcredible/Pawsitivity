@@ -8,7 +8,7 @@ jQuery(function ($) {
             var phone = $("input[name='phone']").val();
             var datetime = $("input[name='date']").val();
             var category = $("input[name='category']").val();
-            var service_type = $("input[name='service']").val();
+            var service_type = $("select[name='service']").children("option:selected").val();
             var comments = $("textarea[name='comment']").val();
 
             if ((!emailReg.test(email)) || (email == "")) {
@@ -31,7 +31,7 @@ jQuery(function ($) {
                 }).done(function (data) {
                     alert(JSON.stringify(data));
                 }).fail(function (jqXHR, textStatus) {
-                    alert(textStatus);
+                    alert(jqXHR.responseJSON.message);
                 });
             }
 
