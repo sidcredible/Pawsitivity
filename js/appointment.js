@@ -7,7 +7,7 @@ jQuery(function ($) {
             var email = $("input[name='email']").val();
             var phone = $("input[name='phone']").val();
             var datetime = $("input[name='date']").val();
-            var category = $("input[name='category']").val();
+            var category = $("select[name='category']").children("option:selected").val();
             var service_type = $("select[name='service']").children("option:selected").val();
             var comments = $("textarea[name='comment']").val();
 
