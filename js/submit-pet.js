@@ -8,7 +8,7 @@ jQuery(function ($) {
         function (e) {
             e.preventDefault();
             var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            var phoneReg = /^[0][1-9]\\d{9}$|^[1-9]\\d{9}$/;
+            var phoneReg = /^[0-9]+$/;
             var email = $("input[name='email']").val();
             var title = $("input[name='title']").val();
             var name = $("input[name='pet_name']").val();
@@ -20,18 +20,17 @@ jQuery(function ($) {
             var is_vaccinated = $("input[name='is_vaccinated']").val();
             var gender = $("input[name='gender']").val();
             var type = $("select[name='type']").children("option:selected").val();;
-            var breed = $("input[name='breed']").val();
+            var breed = $("select[name='breed']").children("option:selected").val();
             var files = $("input[name='pet-image']")[0].files;
-            var phone = $("input[name='phone']");
-
+            var phone = $("input[name='phone']").val();
             if ((!emailReg.test(email)) || (email == "")) {
                 $("input[name='email']").addClass("is-invalid");
                 $("input[name='email']").focus();
             }
-            // else if ((!phoneReg.test(phone)) || (phone == "")) {
-            //     $("input[name='phone']").addClass("is-invalid");
-            //     $("input[name='phone']").focus();
-            // }
+            else if ((!phoneReg.test(phone)) || (phone == "")) {
+                $("input[name='phone']").addClass("is-invalid");
+                $("input[name='phone']").focus();
+            }
             else {
 
                 var fd = new FormData();
