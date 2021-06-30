@@ -24,7 +24,6 @@ jQuery(function ($) {
                         <li>Age: <strong>${element.age}</strong></li>
                         <li>Gender: <strong>${element.gender}</strong></li>
                         <li>Size: <strong>${element.size}</strong></li>
-                        <li>Weight: <strong>${element.weight}</strong></li>
                         <li>Color: <strong>${element.color}</strong></li>
                         <li>Breed: <strong>${element.breed}</strong></li>
                     </ul>
