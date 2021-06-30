@@ -29,9 +29,9 @@ jQuery(function ($) {
                     url: "http://ec2-34-236-227-232.compute-1.amazonaws.com:3000/appointment",
                     data: data,
                 }).done(function (data) {
-                    alert(JSON.stringify(data));
+                    alert("Your appointment request has been Submitted");
                 }).fail(function (jqXHR, textStatus) {
-                    alert(jqXHR.responseJSON.message);
+                    alert(jqXHR.responseJSON);
                 });
             }
 
