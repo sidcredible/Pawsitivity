@@ -85,13 +85,13 @@ jQuery(function ($) {
                     }).done(function (data) {
                         alert("Your request for adoption has been submitted, our team will contact you shortly");
                     }).fail(function (jqXHR, textStatus) {
-                        alert(jqXHR.responseJSON);
+                         alert(JSON.stringify(jqXHR.responseJSON));
                     });
                 }
 
 
             });
     }).fail(function (jqXHR, textStatus) {
-        alert(jqXHR.responseJSON);
+         alert(JSON.stringify(jqXHR.responseJSON));
     });
 });

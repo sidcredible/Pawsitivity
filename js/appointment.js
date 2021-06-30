@@ -31,7 +31,7 @@ jQuery(function ($) {
                 }).done(function (data) {
                     alert("Your appointment request has been Submitted");
                 }).fail(function (jqXHR, textStatus) {
-                    alert(jqXHR.responseJSON);
+                     alert(JSON.stringify(jqXHR.responseJSON));
                 });
             }
 

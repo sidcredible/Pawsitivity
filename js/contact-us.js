@@ -26,7 +26,7 @@ jQuery(function ($) {
                 }).done(function (data) {
                     alert("Your query have been Submitted");
                 }).fail(function (jqXHR, textStatus) {
-                    alert(jqXHR.responseJSON);
+                     alert(JSON.stringify(jqXHR.responseJSON));
                 });
             }
 

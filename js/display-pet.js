@@ -35,7 +35,7 @@ jQuery(function ($) {
 
 
     }).fail(function (jqXHR, textStatus) {
-        alert(jqXHR.responseJSON);
+        alert(JSON.stringify(jqXHR.responseJSON));
     });
 
 });
