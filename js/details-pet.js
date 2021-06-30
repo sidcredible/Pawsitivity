@@ -18,8 +18,9 @@ jQuery(function ($) {
                 $("#image").attr("src", element.image_url);
                 $("#pets-box").after(`<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                 <div class="mb-5 name">
-                    <h4>Name: <strong>${element.name}</strong></h4>
+                    <h4>Name: <strong>${element.title}</strong></h4>
                     <ul class="petdetails">
+                        <li>Owner: <strong>${element.name}</strong></li>
                         <li>Age: <strong>${element.age}</strong></li>
                         <li>Gender: <strong>${element.gender}</strong></li>
                         <li>Size: <strong>${element.size}</strong></li>

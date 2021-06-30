@@ -22,7 +22,7 @@ jQuery(function ($) {
                     </div>
                 </div>
                 <div class="lower-content">
-                    <h3><a href="pet-detail.html">${element.name}</a></h3>
+                    <h3><a href="pet-detail.html">${element.title}</a></h3>
                     <ul>
                         <li>${element.gender} ${element.age}</li>
                         <li>${element.breed}</li>
