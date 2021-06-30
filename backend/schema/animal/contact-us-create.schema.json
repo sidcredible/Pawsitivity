@@ -1,0 +1,26 @@
+{
+  "$async": true,
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "subject",
+    "email",
+    "message"
+  ],
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^(([^<>()\\[\\]\\.,;:\\s@\\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0][1-9]\\d{9}$|^[1-9]\\d{9}$"
+    },
+    "message": {
+      "type": "string"
+    }
+  }
+}

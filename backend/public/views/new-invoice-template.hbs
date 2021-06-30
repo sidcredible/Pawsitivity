@@ -1,0 +1,226 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 10px;
+        }
+
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+        }
+
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .invoice-box table tr.details td {
+            padding-bottom: 10px;
+        }
+
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        /*.invoice-box table tr.total td:nth-child(2) {*/
+        /*    border-top: 2px solid #eee;*/
+        /*    font-weight: bold;*/
+        /*}*/
+
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /** RTL **/
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
+
+        .rtl table {
+            text-align: right;
+        }
+
+        .rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+<div class="invoice-box">
+    <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="2">
+                <table style="background-color:#5555;">
+                    {{#order}}
+                        <tr>
+                            <td>
+                                <b>Invoice #</b>: {{invoice_no}}<br>
+                                Order Status: {{status}}<br>
+                                Payment Mode: {{payment_mode}}
+                            </td>
+                            <td style="text-align: left; float: right">
+                                <b>Gst #:</b> {{gst_id}}<br>
+                                <b>Order #:</b> {{order_id}}<br>
+                                Date: {{date}}
+                            </td>
+                        </tr>
+                    {{/order}}
+                </table>
+            </td>
+        </tr>
+
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        {{#company}}
+                            <td>
+                                <b>From</b><br>
+                                {{name}}<br>
+                                {{address}}<br>
+                                Email: {{email}}<br>
+                                Phone: {{phone}}
+                            </td>
+                        {{/company}}
+                        {{#buyer}}
+                            <td style="text-align: left; max-width: 300px">
+                                <b>To</b><br>
+                                {{name}}<br>
+                                {{address}}<br>
+                                Email: {{email}}<br>
+                                Phone: {{phone}}
+                            </td>
+                        {{/buyer}}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+
+    <table cellpadding="0" cellspacing="0">
+        {{#order}}
+            <tr class="heading">
+                <td>#</td>
+                <td style="text-align: left">Description</td>
+                <td>Qty</td>
+                <td>Rate/unit</td>
+                <td>CGST</td>
+                <td>SGST</td>
+                <td style="text-align: center">Tax. Amount</td>
+                <td style="text-align: center">Amount</td>
+            </tr>
+            {{#each products}}
+                <tr class="item">
+                    <td>{{inc @index}}</td>
+                    <td style="text-align: left">{{title}} - {{base_quantity}}</td>
+                    <td>{{no_of_units}}</td>
+                    <td>{{rate}}</td>
+                    <td>{{mul (divBy2 gst_amount) no_of_units}}</td>
+                    <td>{{mul (divBy2 gst_amount) no_of_units}}</td>
+                    <td style="text-align: center">{{mul rate no_of_units}}/-</td>
+                    <td style="text-align: center">{{mul (add rate gst_amount) no_of_units}}/-</td>
+                </tr>
+            {{/each}}
+
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{divBy2 total_gst}}/-</td>
+                <td>{{divBy2 total_gst}}/-</td>
+                <td style="text-align: center">{{round (dec (dec total delivery_charge) total_gst)}}/-</td>
+                <td style="text-align: center">{{round (dec total delivery_charge)}}/-</td>
+            </tr>
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b style="text-align: left">Delivery Charge:</b></td>
+                <td>Rs. {{delivery_charge}}/-</td>
+            </tr>
+            <tr class="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><b style="text-align: left">Paid Amount:</b></td>
+                <td>Rs. {{total}}/-</td>
+            </tr>
+        {{/order}}
+    </table>
+    <p>* Terms and Conditions applied</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<div class="container" style="margin-top: 50px">
+    <div class="card">
+        {{#order}}
+            <div class="card-header">
+                Invoice:
+                <strong>{{order_id}}</strong>
+                <span class="float-right"> <strong>GST ID:</strong> {{gst_id}}</span>
+            </div>
+            <div class="card-header">
+                Payment Status:
+                <strong>{{payment_status}}</strong>
+                <span class="float-right"> <strong>Status:</strong> {{status}}</span>
+            </div>
+            <div class="card-header">
+                Payment Mode:
+                <strong>{{payment_mode}}</strong>
+                <span class="float-right"> <strong>Date:</strong> {{date}}</span>
+            </div>
+        {{/order}}
+
+
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-sm-6">
+                    <h6 class="mb-3">From:</h6>
+                    {{#company}}
+                        <div>
+                            <strong>{{name}}</strong>
+                        </div>
+                        <div>{{address}}</div>
+                        <div>Email: {{email}}</div>
+                        <div>Phone: {{phone}}</div>
+                    {{/company}}
+                </div>
+
+                <div class="col-sm-6">
+                    <h6 class="mb-3">To:</h6>
+                    {{#buyer}}
+                        <div>
+                            <strong>{{name}}</strong>
+                        </div>
+                        <div>{{address}}</div>
+                        <div>Email: {{email}}</div>
+                        <div>Phone: {{phone}}</div>
+                    {{/buyer}}
+                </div>
+
+
+            </div>
+            {{#order}}
+                <div class="table-responsive-sm">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th class="center">#</th>
+                            <th>Item</th>
+                            <th>Description</th>
+
+                            <th class="right">Unit Cost (in ₹)</th>
+                            <th class="center">GST (in ₹)</th>
+                            <th class="center">Qty</th>
+                            <th class="right">Total (in ₹)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each products}}
+                            <tr>
+                                <td class="center">{{inc @index}}</td>
+                                <td class="left strong">{{title}}</td>
+                                <td class="left">{{base_quantity}}</td>
+
+                                <td class="right">{{dec rate gst_amount}}</td>
+                                <td class="center">{{gst_amount}}</td>
+                                <td class="center">{{no_of_units}}</td>
+                                <td class="right">{{mul rate no_of_units}}/-</td>
+                            </tr>
+                        {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-sm-5">
+
+                    </div>
+
+                    <div class="col-lg-4 col-sm-5 ml-auto">
+                        <table class="table table-clear">
+                            <tbody>
+                            <tr>
+                                <td class="left">
+                                    <strong>Total</strong>
+                                </td>
+                                <td class="right">
+                                    <strong>₹ {{total}}/-</strong>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            {{/order}}
+        </div>
+    </div>
+</div>

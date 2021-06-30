@@ -1,0 +1,49 @@
+{
+  "$async": true,
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "name",
+    "email",
+    "phone",
+    "datetime",
+    "category",
+    "service_type",
+    "comments"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^(([^<>()\\[\\]\\.,;:\\s@\\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0][1-9]\\d{9}$|^[1-9]\\d{9}$"
+    },
+    "datetime": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Cat",
+        "Dog"
+      ]
+    },
+    "service_type": {
+      "type": "string",
+      "enum": [
+        "Vaccination",
+        "Treatment",
+        "Routine Checkup",
+        "Other"
+      ]
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}

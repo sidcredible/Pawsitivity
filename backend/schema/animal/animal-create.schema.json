@@ -1,0 +1,57 @@
+{
+  "$async": true,
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "title",
+    "email",
+    "phone",
+    "name",
+    "gender",
+    "type",
+    "age",
+    "size",
+    "is_vaccinated"
+  ],
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string",
+      "pattern": "^(([^<>()\\[\\]\\.,;:\\s@\\\"]+(\\.[^<>()\\[\\]\\.,;:\\s@\\\"]+)*)|(\\\".+\\\"))@(([^<>()[\\]\\.,;:\\s@\\\"]+\\.)+[^<>()[\\]\\.,;:\\s@\\\"]{2,})$"
+    },
+    "phone": {
+      "type": "string",
+      "pattern": "^[0][1-9]\\d{9}$|^[1-9]\\d{9}$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string",
+      "enum": ["male", "female"]
+    },
+    "type": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    },
+    "age": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "breed": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "is_vaccinated": {
+      "type": "boolean"
+    }
+  }
+}
